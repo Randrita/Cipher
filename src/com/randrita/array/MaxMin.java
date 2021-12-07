@@ -1,6 +1,7 @@
 package com.randrita.array;
-
 import java.util.Scanner;
+
+//Find Max and Min element in an array
 
 public class MaxMin {
 

@@ -1,6 +1,8 @@
 package com.randrita.array;
 import java.util.Scanner;
 
+//Reverse a Given Array
+
 public class ReverseArray {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
