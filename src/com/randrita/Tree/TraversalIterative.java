@@ -32,6 +32,28 @@ public class TraversalIterative {
 
     }
 
+    public void preOrderTraversal(TreeNode root,ArrayList<Integer> list,Stack<TreeNode> stack){
+        while(true){
+            if(root!=null){
+                stack.push(root);
+                list.add(root.val);
+                root=root.left;
+            }
+
+            else{
+                if(stack.isEmpty()){
+                    break;
+                }
+
+                if(root==null){
+                    root=stack.pop();
+                }
+                root=root.right;
+
+            }
+        }
+    }
+
     public static void main(String[] args) {
         TraversalIterative  tree = new TraversalIterative();
         TraversalIterative.TreeNode root = new TraversalIterative.TreeNode(1);
@@ -43,8 +65,8 @@ public class TraversalIterative {
         ArrayList<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
 
-        tree.inorderTraversal(root,list,stack);
-        System.out.println("Inorder Traversal iterative approach: "+list);
+        tree.preOrderTraversal(root,list,stack);
+        System.out.println("preOrderTraversal iterative approach: "+list);
 
 
 
