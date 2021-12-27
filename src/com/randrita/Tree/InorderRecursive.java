@@ -20,6 +20,15 @@ public class InorderRecursive {
         list.add(node.val);
         inorderTraversal(node.Right,list);}
 
+    void preOrderTraversal(TreeNode node, ArrayList<Integer> list){
+        if(node==null){
+            return;
+        }
+
+        list.add(node.val);
+        inorderTraversal(node.left,list);
+        inorderTraversal(node.Right,list);}
+
 
     public static void main(String[] args) {
         InorderRecursive tree = new InorderRecursive();
@@ -33,6 +42,10 @@ public class InorderRecursive {
 
         tree.inorderTraversal(root,list);
         System.out.println("Inorder Traversal of a given tree: "+list);
+
+        ArrayList<Integer> list1 = new ArrayList<>();
+        tree.preOrderTraversal(root,list1);
+        System.out.println("PreOrder Traversal of a given tree: "+list1);
 
     }
 }
